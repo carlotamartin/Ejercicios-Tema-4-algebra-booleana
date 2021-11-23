@@ -134,7 +134,6 @@ def dia (numero):
     else:
         return print('Algo esta mal')
 
-num = 6
-print(dia(num))
+
 
 #dia_semama ()
