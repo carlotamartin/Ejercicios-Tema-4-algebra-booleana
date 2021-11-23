@@ -54,6 +54,8 @@ def main ():
         while dia <=1 and dia>=31:
             dia = int(input('Escribe el día: '))
         mes= input('Escriba el mes: ')
+        while mes != 'Enero' and  mes != 'Febrero'and  mes != 'Marzo'and  mes != 'Abril'and  mes != 'Mayo'and  mes != 'Junio'and  mes != 'Julio'and  mes != 'Agosto'and  mes != 'Septiembre'and  mes != 'Octubre'and  mes != 'Noviembre' and mes != 'Diciembre':
+            mes= input('Escriba el mes: ')
         año = int(input('Escriba el año: '))
         while año <=1600 and año>=2200:
             año = int(input('Escriba el año: '))
