@@ -51,13 +51,13 @@ def main ():
         print ('El año tiene que estar entre el 1600 y el 2200')
         #Suponemos que tenemos que pedir por teclado el día, mes y año. Lanzamos una excepción si
         dia = int(input('Escribe el día: '))
-        while dia <=1 and dia>=31:
+        while dia <1 or dia>31:
             dia = int(input('Escribe el día: '))
         mes= input('Escriba el mes: ')
-        while mes != 'Enero' and  mes != 'Febrero'and  mes != 'Marzo'and  mes != 'Abril'and  mes != 'Mayo'and  mes != 'Junio'and  mes != 'Julio'and  mes != 'Agosto'and  mes != 'Septiembre'and  mes != 'Octubre'and  mes != 'Noviembre' and mes != 'Diciembre':
+        while mes != 'Enero' and  mes != 'Febrero' and  mes != 'Marzo'and  mes != 'Abril'and  mes != 'Mayo'and  mes != 'Junio'and  mes != 'Julio'and  mes != 'Agosto'and  mes != 'Septiembre'and  mes != 'Octubre'and  mes != 'Noviembre' and mes != 'Diciembre':
             mes= input('Escriba el mes: ')
         año = int(input('Escriba el año: '))
-        while año <=1600 and año>=2200:
+        while año <1600 or año>2200:
             año = int(input('Escriba el año: '))
         #Conserve las dos últimas cifras del año.
         num = año%2
