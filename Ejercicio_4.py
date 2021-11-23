@@ -45,24 +45,35 @@ Este resto es el día de la semana buscado.
 0 para Sábado
 '''
 def main ():
-    #Suponemos que tenemos que pedir por teclado el día, mes y año. Lanzamos una excepción si
-    dia = int(input('Escribe el día: '))
-    mes= input('Escriba el mes: ')
-    año = int(input('Escriba el año: '))
-    #Conserve las dos últimas cifras del año.
-    num = año%2
-    #Añada 1/4 de esta cifra, ignorando el resto: división entera.
-    num = num//4
-    #Añada el día del mes.
-    num += añadir_mes(mes)
-    #Si el año es bisiesto y el mes es enero o febrero, restamos 1.
-    if is_leap(año)== True or mes=='Enero' or mes == 'Febrero':
-        num-=1
-    #Según el siglo, añada el valor indicado:
-    num += añadir_año(año)
-    #Divida la suma por 7 y guarde el resto: un módulo.
-    num = num%7
-    dia_(num)
+    try:
+        print('El día tiene que ser un número entero entre el 1 y el 31.')
+        print('El mes tiene que ser una cadena de texto , donde tiene la primera letra tiene que ser en mayúsculas ')
+        print ('El año tiene que estar entre el 1600 y el 2200')
+        #Suponemos que tenemos que pedir por teclado el día, mes y año. Lanzamos una excepción si
+        dia = int(input('Escribe el día: '))
+        while dia <=1 and dia>=31:
+            dia = int(input('Escribe el día: '))
+        mes= input('Escriba el mes: ')
+        año = int(input('Escriba el año: '))
+        while año <=1600 and año>=2200:
+            año = int(input('Escriba el año: '))
+        #Conserve las dos últimas cifras del año.
+        num = año%2
+        #Añada 1/4 de esta cifra, ignorando el resto: división entera.
+        num = num//4
+        #Añada el día del mes.
+        num += añadir_mes(mes)
+        #Si el año es bisiesto y el mes es enero o febrero, restamos 1.
+        if is_leap(año)== True or mes=='Enero' or mes == 'Febrero':
+            num-=1
+        #Según el siglo, añada el valor indicado:
+        num += añadir_año(año)
+        #Divida la suma por 7 y guarde el resto: un módulo.
+        num = num%7
+        dia_(num)
+    except TypeError:
+        print ('Algo fue mal')
+
 
 def añadir_mes (mes):
     if mes == 'Enero':
