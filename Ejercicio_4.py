@@ -8,30 +8,7 @@ Añada 1/4 de esta cifra, ignorando el resto: división entera.
 Añada el día del mes.
 
 Según el mes, añada el valor indicado:
-
-Enero = 1
-
-Febrero = 4
-
-Marzo = 4
-
-Abril = 0
-
-Mayo = 2
-
-Junio = 5
-
-Julio = 0
-
-Agosto = 3
-
-Septiembre = 6
-
-Octubre = 1
-
-Noviembre = 4
-
-Diciembre = 6
+Enero = 1 Febrero = 4 Marzo = 4 Abril = 0 Mayo = 2 Junio = 5 Julio = 0 Agosto = 3 Septiembre = 6 Octubre = 1 Noviembre = 4 Diciembre = 6
 
 Si el año es bisiesto y el mes es enero o febrero, restamos 1.
 
@@ -67,6 +44,11 @@ Este resto es el día de la semana buscado.
 
 0 para Sábado
 '''
+def dia_semama ():
+    #Suponemos que tenemos que pedir por teclado el día, mes y año. Lanzamos una excepción si
+    dia = int(input('Escribe el día:'))
+    mes= (input('Escriba el mes')
+    año = int(input('Escriba el año'))
 
 def añadir_mes (mes):
     if mes == 'Enero':
@@ -98,3 +80,46 @@ mes = 'Octubre'
 mes2 ='Diciembre'
 print (añadir_mes(mes))
 print(añadir_mes(mes2))
+
+
+#Función para saber si es bisiesto
+def is_leap(year):
+    leap = False
+    if(((year % 4) ==0) or ((year% 100) !=0) or ((year% 400) ==0)):
+        leap=True
+# Write your logic here
+    return leap
+
+#función para el año
+def año_num (año):
+    if año >=1600 and año<1700:
+        return 6;
+    elif año >=1700 and año<1800:
+        return 4;
+    elif año >=1800 and año<1900:
+        return 2;
+    elif año >=1900 and año<2200:
+        return 0;
+    elif año >=2000 and año<2100:
+        return 6;
+    elif año >=2100 and año<2200:
+        return 4;
+
+#resultado
+def dia (numero):
+    if numero == 1:
+        return print('El dia es el domingo')
+    elif numero ==2:
+        return print ('El día es el lunes')
+    elif numero ==3:
+        return print ('El día es el martes')
+    elif numero ==4:
+        return print ('El día es el miercoles')
+    elif numero ==5:
+        return print ('El día es el jueves')
+    elif numero ==6:
+        return print ('El día es el viernes')
+    elif numero ==0:
+        return print ('El día es el sabado')
+    else:
+        return print('Algo esta mal')
