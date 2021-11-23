@@ -13,12 +13,12 @@ Escriba el programa Python asociado.
 '''
 def categoria (edad):
     if edad==6 or edad==7:
-        return ('El niño con edad '+ str(edad) +' es benjamin')
+        return print('El niño con edad '+ str(edad) +' es benjamin')
     elif edad==8 or edad==9:
-        return ('El niño con edad '+ str(edad) +' es alevin')
+        return print('El niño con edad '+ str(edad) +' es alevin')
     elif edad==10 or edad==11:
-        return ('El niño con edad '+ str(edad) +' es infantil')
+        return print('El niño con edad '+ str(edad) +' es infantil')
     elif edad>12:
-        return ('El niño con edad '+ str(edad) +' es cadete')
+        return print('El niño con edad '+ str(edad) +' es cadete')
 
 categoria(9)
