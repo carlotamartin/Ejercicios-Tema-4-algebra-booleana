@@ -47,8 +47,23 @@ Este resto es el día de la semana buscado.
 def dia_semama ():
     #Suponemos que tenemos que pedir por teclado el día, mes y año. Lanzamos una excepción si
     dia = int(input('Escribe el día:'))
-    mes= (input('Escriba el mes')
+    mes= input('Escriba el mes')
     año = int(input('Escriba el año'))
+    #Conserve las dos últimas cifras del año.
+    num = año%2
+    #Añada 1/4 de esta cifra, ignorando el resto: división entera.
+    num = num//4
+    #Añada el día del mes.
+    num += añadir_mes(mes)
+    #Si el año es bisiesto y el mes es enero o febrero, restamos 1.
+    if is_leap(año)== True or mes=='Enero' or mes == 'Febrero':
+        num-=1
+    #Según el siglo, añada el valor indicado:
+    num += añadir_año(año)
+    #Divida la suma por 7 y guarde el resto: un módulo.
+    num = num%7
+
+    return print(num)
 
 def añadir_mes (mes):
     if mes == 'Enero':
@@ -91,7 +106,7 @@ def is_leap(year):
     return leap
 
 #función para el año
-def año_num (año):
+def añadir_año (año):
     if año >=1600 and año<1700:
         return 6;
     elif año >=1700 and año<1800:
