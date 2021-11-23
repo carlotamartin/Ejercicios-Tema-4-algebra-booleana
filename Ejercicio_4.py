@@ -46,9 +46,9 @@ Este resto es el día de la semana buscado.
 '''
 def dia_semama ():
     #Suponemos que tenemos que pedir por teclado el día, mes y año. Lanzamos una excepción si
-    dia = int(input('Escribe el día:'))
-    mes= input('Escriba el mes')
-    año = int(input('Escriba el año'))
+    dia = int(input('Escribe el día: '))
+    mes= input('Escriba el mes: ')
+    año = int(input('Escriba el año: '))
     #Conserve las dos últimas cifras del año.
     num = año%2
     #Añada 1/4 de esta cifra, ignorando el resto: división entera.
@@ -62,8 +62,7 @@ def dia_semama ():
     num += añadir_año(año)
     #Divida la suma por 7 y guarde el resto: un módulo.
     num = num%7
-
-    return print(num)
+    dia(num)
 
 def añadir_mes (mes):
     if mes == 'Enero':
@@ -120,6 +119,8 @@ def añadir_año (año):
     elif año >=2100 and año<2200:
         return 4;
 
+año = 34
+print (añadir_año(año))
 #resultado
 def dia (numero):
     if numero == 1:
@@ -138,3 +139,5 @@ def dia (numero):
         return print ('El día es el sabado')
     else:
         return print('Algo esta mal')
+
+#dia_semama ()
