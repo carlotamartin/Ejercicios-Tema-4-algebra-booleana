@@ -90,11 +90,6 @@ def añadir_mes (mes):
     elif  mes == 'Diciembre':
         return 6
 
-mes = 'Octubre'
-mes2 ='Diciembre'
-print (añadir_mes(mes))
-print(añadir_mes(mes2))
-
 
 #Función para saber si es bisiesto
 def is_leap(year):
@@ -119,8 +114,7 @@ def añadir_año (año):
     elif año >=2100 and año<2200:
         return 4;
 
-año = 34
-print (añadir_año(año))
+
 #resultado
 def dia (numero):
     if numero == 1:
@@ -139,5 +133,8 @@ def dia (numero):
         return print ('El día es el sabado')
     else:
         return print('Algo esta mal')
+
+num = 6
+print(dia(num))
 
 #dia_semama ()
