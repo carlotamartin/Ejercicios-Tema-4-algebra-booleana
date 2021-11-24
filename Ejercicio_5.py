@@ -2,6 +2,26 @@
 Un ascensor se controla como sigue:
 
 Un interruptor de fin de viaje a cambia cuando la cabina está abajo.
+'''
+def esta_abajo(a):
+    a = True
+
+def esta_arriba(b):
+    b = False
+
+def subiendo(c):
+    c = True
+
+def bajando(c):
+    c = False
+
+def main():
+    a = False
+    b = False
+    c=0
+
+
+'''
 
 Un interruptor de fin de viaje b cambia cuando la cabina está arriba.
 
